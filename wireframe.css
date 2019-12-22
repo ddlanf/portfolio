@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    overflow: hidden;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height:100%;
+    overflow: auto;
+    margin: 0;
+}
+
+.top{
+    background: gray;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    display: block;
+    position: fixed;
+    top:0;
+}
+
+.header-text{
+    position:  absolute;
+    top: 5px;
+    font-size: 20px;
+}
+
+.logos{
+    margin-left: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.top-image{
+    width: 40px;
+    height: 40px;
+    margin:0;
+}
+
+.laptop{
+    display: none;
+}
+
+.main{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.my-name{
+    font-size: 25px;
+}
+
+h1{
+    font-size: 18px;
+    min-width: 300px;
+    width: 80%;
+    max-width: 570px;
+    display: inline-block;
+}
+
+.phone-or-laptop{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    max-width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.bio{
+    text-align: center;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+}
+
+
+h2{
+    font-size: 15px;
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h3{
+    font-size: 5vw;
+    margin-bottom: 15px;
+}
+
+.title{
+    margin: 0;
+    font-size: 2.5vw;
+}
+
+.image2{
+    border: 1px solid black;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60%;
+    height: 35vw;
+}
+
+
+.description{
+    margin-top: 0px;
+    font-size: 15px;
+    min-width: 300px;
+    width: 60%;
+}
+
+footer{
+    background: gray;
+    margin-top: 50px;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 900px) {
+    .phone-or-laptop{
+        max-width: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 800px;
+        height: 550px;
+        border: 1px solid black;
+    }
+    .phone{
+        display: none;
+    }
+
+    .laptop{
+        display: block;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    h3{
+        font-size: 50px;
+    }
+
+    .description{
+        font-size: 20px;
+    }
+}
