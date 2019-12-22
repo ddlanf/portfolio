@@ -25,7 +25,7 @@ body{
 
 .header-text{
     position:  absolute;
-    top: 5px;
+    top: 0;
     font-size: 20px;
 }
 
@@ -43,6 +43,10 @@ body{
     margin:0;
 }
 
+.top-text{
+    display: none;
+}
+
 .laptop{
     display: none;
 }
@@ -53,7 +57,9 @@ body{
 }
 
 .my-name{
+    max-width: 40px;
     font-size: 25px;
+    margin-bottom: 5px;
 }
 
 h1{
@@ -103,7 +109,7 @@ h3{
 
 .title{
     margin: 0;
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 
 .image2{
@@ -124,14 +130,25 @@ h3{
 
 footer{
     background: gray;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
     padding: 10px;
     display: block;
+    text-align: right;
     box-sizing: border-box;
 }
 
 @media only screen and (min-width: 900px) {
+    
+    .top-text{
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    img.top-image{
+        display: none;
+    }
     .phone-or-laptop{
         max-width: none;
         display: block;
