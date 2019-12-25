@@ -17,13 +17,21 @@ body{
     color: black;
 }
 
-a:link {
+
+a:link{
     color: blue;
+    text-decoration: none;
 }
 
 a:visited{
     color: purple;
+    text-decoration: none;
 }
+
+a:hover{
+    text-decoration: underline;
+}
+
 
 /*for the top layout */
 .top{
@@ -34,6 +42,7 @@ a:visited{
     display: block;
     position: fixed;
     top:0;
+    z-index: 2;
 }
 
 .header-text{
@@ -55,6 +64,15 @@ a:visited{
     width: 40px;
     height: 40px;
     margin:0;
+    -webkit-transition: width height 0.5s linear;
+    -moz-transition: width height 0.5s linear;
+    -o-transition: width height 0.5s linear;
+     transition: width height 0.5s linear;
+}
+
+img.top-image:hover{
+    width: 45px;
+    height: 45px;
 }
 
 .top-text{
@@ -64,15 +82,11 @@ a:visited{
     justify-content: space-around;
 }
 
-/* For the phone picture and introduction*/
-.main{
+/* For introduction*/
+.introduction{
     margin-top: 80px;
     text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
 }
 
 .my-name{
@@ -94,16 +108,68 @@ h1{
     margin-bottom: 30px;
 }
 
-.phone{
+/*For phone and buttons*/
+
+.moving-parts{
+    position: relative;
     width: 300px;
-    margin-bottom: 10px;
-    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.phone-container{
+    position: relative;
+    width: 300px;
     margin-right: auto;
     margin-left: auto;
+    z-index: -2;
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
+}
+
+.phone{
+    width: 300px;
+    height: 600px;
+    margin-bottom: 10px;
+    display: block;
+    z-index: -1;
+}
+
+.bio-button, .portfolio-button, .my-pic{
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 35px;
+    width: 180px;
+    height: 100px;
+    border: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.my-pic{
+    top: 60px;
+    height: 220px;
+    width: 210px;
+    left: 45px;
+    border: 1px solid black;
+    border-radius: none;
+}
+
+.bio-button{
+    top:300px;
+    left: 60px;
+    background-color: blue;
+    border-radius: 50px;
+}
+
+.portfolio-button{
+    top: 430px;
+    left: 60px;
+    background-color: orange;
+    border-radius: 50px;
 }
 
 .rotate-bottom, .rotate-top{
@@ -117,20 +183,21 @@ h1{
     -webkit-transition: background-color 1s ease-out;
     -moz-transition: background-color 1s ease-out;
     -o-transition: background-color 1s ease-out;
-     transition: background-color 1s ease-in-out;
+    transition: background-color 1s ease-in-out;
 }
 
 .rotate-bottom{
     display: none;
     position: absolute;
-    right: 5%;
+    left: 700px;
     bottom: 280px;
 }
+
 .rotate-top{
     display: none;
     position: absolute;
-    left: 45%;
-    top: 230px;
+    left: 400px;
+    top: 20px;
 }
 
 .rotate-bottom:hover, .rotate-top:hover{
@@ -140,12 +207,12 @@ h1{
 
 /*For the biography portion*/
 
-.bio{
+#bio{
     text-align: center;
     width: 90%;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 
@@ -162,7 +229,7 @@ h2{
 }
 
 /*  Porfolio */
-.portfolio{
+#portfolio{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,13 +240,13 @@ h2{
 
 h3{
     font-family: Oswald;
-    font-size: 5vw;
+    font-size: 32px;
     margin-bottom: 15px;
 }
 
 .title{
     margin: 0;
-    font-size: 3vw;
+    font-size: 18px;
     font-family: 'Inria Serif', serif;
 }
 
@@ -204,6 +271,10 @@ h3{
     font-family: 'Inria Serif', serif;
 }
 
+.porfolio-links{
+    font-size: 14px;
+}
+
 /* for footer*/
 footer{
     background: gray;
@@ -220,33 +291,41 @@ footer{
 
 @media only screen and (min-width: 900px) {
     
+/*Header*/
     .top-text{
         display: flex;
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 23px;
     }
 
     img.top-image{
         display: none;
     }
-
-    .title{
-        font-size: 30px;
-    }
-
-    .about-me{
-        font-size: 26px;
-    }
-
+/*Introduction*/
     .my-name{
         font-size: 35px;
     }
     h1{
         font-size: 30px;
     }
+  
+/*Phone and buttons*/
+    .rotate-bottom{
+        display: inline;
+    }
+    .moving-parts{
+        width: 900px;
+    }
+/*Biography*/
+    .about-me{
+        font-size: 32px;
+    }
+
     h2{
         font-size: 20px;
     }
+
+/*Portfolio*/
     h3{
         font-size: 50px;
     }
@@ -261,6 +340,13 @@ footer{
     
     .description{
         font-size: 20px;
+    }
+
+    .title{
+        font-size: 23px;
+    }
+    .porfolio-links{
+        font-size: 19px;
     }
 
 }

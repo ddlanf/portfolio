@@ -1,22 +1,32 @@
 let phoneRotate = false;
 
+//function to rotatephone
 function rotatePhone(){
     $(".rotate-bottom").click(function(){
-        $(".phone").css('transform', `rotate(90deg)`);
+        $(".phone-container").css('transform', `rotate(90deg)`);
         $(".rotate-bottom").css('display', `none`);
-        $(".rotate-top").css('display', `inline-block`);
+        setTimeout(displayTopButton, 600);
         phoneRotate = true;
     });
 
     $(".rotate-top").click(function(){
-        $(".phone").css('transform', `rotate(0deg)`);
+        $(".phone-container").css('transform', `rotate(0deg)`);
         $(".rotate-top").css('display', `none`);    
-        $(".rotate-bottom").css('display', `inline-block`);
+        setTimeout(displayBottomButton, 600);
         phoneRotate = false;
     });
 }
 
-//Need more work
+//functions to displays the buttons
+function displayTopButton(){
+    $(".rotate-top").css('display', `inline-block`);
+}
+
+function displayBottomButton(){
+    $(".rotate-bottom").css('display', `inline-block`);
+}
+
+//function to delete buttons when necessary
 function deleteButtons(){
     $( window ).resize(function(){
         if($(window).width() > 900 && phoneRotate === true){
@@ -34,6 +44,7 @@ function deleteButtons(){
     });
 }
 
+//function to run all functions
 function runAllfunctions(){
     rotatePhone();
     deleteButtons();
