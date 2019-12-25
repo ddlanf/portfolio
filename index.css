@@ -1,6 +1,8 @@
+/*For the over-all layout*/
 *{
     box-sizing: border-box;
 }
+
 html{
     overflow: hidden;
     height: 100%;
@@ -15,6 +17,15 @@ body{
     color: black;
 }
 
+a:link {
+    color: blue;
+}
+
+a:visited{
+    color: purple;
+}
+
+/*for the top layout */
 .top{
     background: gray;
     width: 100%;
@@ -53,6 +64,7 @@ body{
     justify-content: space-around;
 }
 
+/* For the phone picture and introduction*/
 .main{
     margin-top: 80px;
     text-align: center;
@@ -60,6 +72,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    overflow: hidden;
 }
 
 .my-name{
@@ -125,9 +138,7 @@ h1{
     cursor: pointer;
 }
 
-.laptop{
-    display: none;
-}
+/*For the biography portion*/
 
 .bio{
     text-align: center;
@@ -149,6 +160,8 @@ h2{
     font-size: 23px;
     font-family: Oswald;
 }
+
+/*  Porfolio */
 .portfolio{
     display: flex;
     flex-direction: column;
@@ -191,6 +204,7 @@ h3{
     font-family: 'Inria Serif', serif;
 }
 
+/* for footer*/
 footer{
     background: gray;
     margin-top: 20px;
@@ -201,6 +215,8 @@ footer{
     font-family: Oswald;
     box-sizing: border-box;
 }
+
+
 
 @media only screen and (min-width: 900px) {
     
