@@ -5,13 +5,14 @@
 
 html{
     overflow: hidden;
+    scroll-behavior: smooth;
     height: 100%;
     width: 100%;
-    scroll-behavior: smooth;
-    position: relative;
 }
 
 body{
+    height: 100%;
+    width: 100%;
     overflow: auto;
     margin: 0;
     background-color: whitesmoke;
@@ -262,6 +263,16 @@ h2{
     font-family: Oswald;
 }
 
+.skill-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.skill-logo{
+    height: 10vw;
+    max-height: 80px;
+    width: auto;
+}
 /*  Porfolio */
 .portfolio{
     display: flex;
@@ -280,8 +291,9 @@ h3{
 
 .title{
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Inria Serif', serif;
+    font-weight: bold;
 }
 
 .project-image1, .project-image2{
@@ -303,6 +315,23 @@ h3{
     width: 60%;
     line-height: 1.2;
     font-family: 'Inria Serif', serif;
+}
+
+.technology-used{
+    margin: 5px;
+    font-size: 15px;
+    font-family: 'Inria Serif', serif;
+    min-width: 300px;
+    width:60%;
+    max-width: 500px;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.project{
+    height: 2vw;
+    max-height: 30px;
+    width: auto;
 }
 
 .porfolio-links{
