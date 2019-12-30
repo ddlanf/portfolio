@@ -282,6 +282,7 @@ a.bio-button:visited, a.portfolio-button:visited{
     max-height: 80px;
     width: auto;
 }
+
 /*  Porfolio */
 .portfolio{
     padding-top: 25px;
@@ -293,7 +294,7 @@ a.bio-button:visited, a.portfolio-button:visited{
     margin-left: auto;
 }
 
-h3{
+h2{
     font-family: Oswald;
     font-size: 32px;
     margin-bottom: 15px;
@@ -401,12 +402,12 @@ footer{
         font-size: 32px;
     }
 
-    h2{
+    .bio{
         font-size: 20px;
     }
 
 /*Portfolio*/
-    h3{
+    h2{
         font-size: 50px;
     }
 
