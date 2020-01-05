@@ -134,7 +134,6 @@ function hoverEffectForPortfolio(){
     });
 }
 
-
 //function to run all functions
 function runAllfunctions(){
     rotatePhone();
