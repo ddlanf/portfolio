@@ -285,7 +285,7 @@ a.bio-button:visited, a.portfolio-button:visited{
 
 /*  Porfolio */
 .portfolio{
-    padding-top: 25px;
+    padding-top: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
