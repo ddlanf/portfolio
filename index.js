@@ -134,12 +134,20 @@ function hoverEffectForPortfolio(){
     });
 }
 
+function batteryDrain(){
+    $(".gauge").click(function(){
+        $("gauge").css({"width" : "0%"})
+    })
+}
+   
+
 //function to run all functions
 function runAllfunctions(){
     rotatePhone();
     deleteButtons();
     hoverEffectForBio();
     hoverEffectForPortfolio();
+    batteryDrain();
 } 
 
 $(runAllfunctions);
