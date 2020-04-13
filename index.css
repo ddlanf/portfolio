@@ -266,7 +266,6 @@ a.bio-button:visited, a.portfolio-button:visited{
     font-family: 'Inria Serif', serif;
 }
 
-
 .about-me{
     font-size: 23px;
     font-family: Oswald;
@@ -349,9 +348,16 @@ h2{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     min-width: 300px;
     width:60%;
 }
+
+.link{
+    margin-top:2%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
 .technology-used{
     font-size: 15px;
