@@ -49,14 +49,15 @@ a:hover{
 
 .header-text{
     position:  absolute;
-    top: -5%;
+    bottom: -22%;
     left: 3%;
-    font-size: 20px;
+    width: 20%;
+    font-size: 18px;
     font-family: Oswald;
 }
 
 .logos{
-    margin-left: 50%;
+    margin-left: 30%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -414,8 +415,8 @@ h2{
 footer{
     background-color:  lightblue;
     margin-top: 20px;
+    height: 20px;
     width: 100%;
-    padding: 10px;
     display: block;
     text-align: right;
     font-family: Oswald;
@@ -445,10 +446,11 @@ footer{
     .header-text{
         font-size: 25px;
         top: -15px;
+        width: 50%;
     }
   
     .logos{
-          margin-left: 75%;
+          margin-left: 55%;
     }
 
     /*Introduction*/
@@ -504,7 +506,7 @@ footer{
   
       /*Footer*/
       footer{
-          font-size: 20px;
+          height: 30px;
       }
 }
 
@@ -603,7 +605,7 @@ footer{
 
     /*Footer*/
     footer{
-        font-size: 20px;
+        height: 50px;
     }
 
 }
