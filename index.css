@@ -277,6 +277,7 @@ a.bio-button:visited, a.portfolio-button:visited{
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .skill-logo{
@@ -403,6 +404,7 @@ h2{
     max-width: 900px;
     margin: 0;
     padding-top: 5px;
+    text-align: center;
 }
 
 .skill-logo.project{
