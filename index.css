@@ -415,8 +415,9 @@ h2{
 footer{
     background-color:  lightblue;
     margin-top: 20px;
-    height: 20px;
+    font-size: 15px;
     width: 100%;
+    padding: 10px;
     display: block;
     text-align: right;
     font-family: Oswald;
@@ -506,7 +507,7 @@ footer{
   
       /*Footer*/
       footer{
-          height: 30px;
+          font-size: 20px;
       }
 }
 
@@ -605,7 +606,7 @@ footer{
 
     /*Footer*/
     footer{
-        height: 50px;
+        font-size: 20px;
     }
 
 }
