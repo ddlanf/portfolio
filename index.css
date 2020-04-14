@@ -78,13 +78,6 @@ img.top-image:hover{
     height: 45px;
 }
 
-.top-text{
-    display: none;
-    position: relative;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 /* For introduction*/
 .introduction{
     margin-top: 80px;
@@ -95,6 +88,8 @@ img.top-image:hover{
 .my-name{
     font-size: 25px;
     line-height: 2;
+    display: block;
+    text-align: center;
 }
 
 h1{
@@ -115,6 +110,7 @@ h1{
 
 .moving-parts{
     position: relative;
+    text-align: center;
     width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -269,6 +265,7 @@ a.bio-button:visited, a.portfolio-button:visited{
 .about-me{
     font-size: 23px;
     font-family: Oswald;
+    text-align: center;
 }
 
 .skill-images{
@@ -289,6 +286,7 @@ a.bio-button:visited, a.portfolio-button:visited{
 }
 
 /*  Porfolio */
+
 .portfolio{
     padding-top: 28px;
     display: flex;
@@ -297,6 +295,7 @@ a.bio-button:visited, a.portfolio-button:visited{
     align-items: center;
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
 }
 
 .project-box{
@@ -304,7 +303,42 @@ a.bio-button:visited, a.portfolio-button:visited{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5%;
+}
+
+.project-box.last{
+    margin-bottom: 15%;
+}
+
+.porfolio-heading > h2{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 8vw;
+    margin-bottom: 8vw;
+    width: 40%;
+}
+
+.porfolio-heading{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-bottom: 0;
+    font-family: Oswald;
+    margin-bottom: 10%;
+}
+
+.left-line, .right-line{
+    border: lightblue 2px solid;
+    width: 30%;
+}
+
+.line{
+    border: 2px dotted lightblue;
+    margin-top: 18%;
+    margin-bottom: 18%;
+    width: 90%;
 }
 
 h2{
@@ -312,6 +346,7 @@ h2{
     font-size: 32px;
     margin-bottom: 20px;
     position: relative;
+    text-align: center;
 }
 
 .title{
@@ -319,6 +354,7 @@ h2{
     font-size: 20px;
     font-family: 'Inria Serif', serif;
     font-weight: bold;
+    margin-bottom: 2%;
 }
 
 .project-image1, .project-image2{
@@ -354,27 +390,25 @@ h2{
 }
 
 .link{
-    margin-top:2%;
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
-  }
+}
 
 .technology-used{
-    font-size: 15px;
     font-family: 'Inria Serif', serif;
     min-width: 300px;
-    width:80%;
-    max-width: 600px;
+    width:85%;
+    max-width: 900px;
     margin: 0;
     padding-top: 5px;
 }
 
-.project{
-    height: 5vw;
+.skill-logo.project{
+    height: 6vw;
     max-height: 40px;
     width: auto;
 }
-
 
 /* for footer*/
 footer{
@@ -404,23 +438,89 @@ footer{
     to { transform: translateY(0); }
 }
 
+@media only screen and (min-width: 500px) {
+
+    /*Header*/
+
+    .header-text{
+        font-size: 25px;
+        top: -15px;
+    }
+  
+    .logos{
+          margin-left: 75%;
+    }
+
+    /*Introduction*/
+    .my-name{
+        font-size: 5vw;
+    }
+    h1{
+        font-size: 4vw;
+        width: 80%;
+    }
+ 
+    /*Biography*/
+    .about-me{
+        font-size: 5vw;
+    }
+
+    .bio{
+        font-size: 2.5vw;
+    }
+
+  /*Portfolio*/
+  
+      .porfolio-heading{
+         margin-bottom: 0%;
+      }
+  
+      .porfolio-heading > h2{
+        font-size: 8vw;
+      }
+  
+  
+      .line{
+         margin-top: 8%;
+         margin-bottom: 8%;
+      }
+      
+      .description{
+          font-size: 20px;
+          width: 80%;
+      }
+  
+      .title{
+        font-size: 5vw;
+      }
+  
+      .porfolio-links{
+          font-size: 3.5vw;
+      }
+
+      .porfolio-links > a{
+          margin-bottom: 2%;
+      }
+  
+      /*Footer*/
+      footer{
+          font-size: 20px;
+      }
+}
+
 @media only screen and (min-width: 1000px) {
     
 /*Header*/
-    .top-text{
-        display: flex;
-        margin-top: 10px;
-        font-size: 23px;
-    }
-
-    img.top-image{
-        display: none;
-    }
 
     .header-text{
       font-size: 25px;
       top: -15px;
     }
+
+    .logos{
+        margin-left: 75%;
+    }
+    
 
 /*Introduction*/
     .my-name{
@@ -439,18 +539,34 @@ footer{
     }
 /*Biography*/
     .about-me{
-        font-size: 32px;
+        font-size: 40px;
     }
 
     .bio{
-        font-size: 20px;
+        font-size: 26px;
     }
 
 /*Portfolio*/
 
+    .porfolio-heading > h2{
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 50px;
+        margin-top: 100px;
+        width: 40%;
+    }
+
+    .left-line, .right-line{
+        width: 50%;
+    }
 
     h2{
         font-size: 50px;
+    }
+
+    .line{
+        margin-top: 8%;
+        margin-bottom: 8%;
     }
 
     .project-image1{
@@ -462,16 +578,29 @@ footer{
     }
     
     .description{
-        font-size: 20px;
+        font-size: 25px;
+        width: 65%;
     }
 
     .title{
-        font-size: 23px;
+        font-size: 30px;
     }
 
     .porfolio-links{
-        font-size: 25px;
+        font-size: 30px;
     }
+
+    .porfolio-links > a{
+          margin-bottom: 0%;
+    }
+
+    .skill-logo.project{
+        height: 3vw;
+        max-height: 60px;
+        width: auto;
+        margin-top: 2%;
+    }
+
     /*Footer*/
     footer{
         font-size: 20px;
