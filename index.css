@@ -443,7 +443,6 @@ footer{
     position: fixed;
     bottom: 15%;
     right: 5%;
-    color: white;
     display: block;
     font-size: 18px;
     font-weight: bold;
@@ -451,14 +450,17 @@ footer{
     width: 30px;
     border: none;
     border-radius: 100%;
-    background-color: lightblue;
+    background-color: transparent;
+    background-image: url("./images/scrollUp.png");
+    background-position: center;
+    background-size: cover;
     cursor: pointer;
     display: none;
     transition-duration: 1s;
 }
 
 .scroll-up-button:hover{
-    background-color: blue;
+    background-image: url('./images/scrollUp\(2\).png');
 }
 
 .scroll-up-button:active,.scroll-up-button:focus 
@@ -554,7 +556,6 @@ footer{
          height: 35px;
          width: 35px;
          bottom: 90px;
-         font-size: 22px;
      }
 }
 
@@ -661,7 +662,6 @@ footer{
         height: 50px;
         width: 50px;
         bottom: 120px;
-        font-size: 30px;
     }
 
 }

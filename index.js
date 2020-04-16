@@ -148,7 +148,6 @@ function appearOnScrollToTheBottom(){
 
 function ScrollUp(){
     $("#scroll-up-button").click(function(){
-        console.log("Hello")
         $("html, body").animate({
             scrollTop: 0
           }, 500);
