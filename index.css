@@ -472,7 +472,7 @@ footer{
 
 @media (hover: none) {
     .scroll-up-button:hover {
-        background-color: rgba(173, 216, 230, 0.466);
+        background-image: url("./images/scrollUp.png");
     }
  }
 

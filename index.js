@@ -138,7 +138,7 @@ function hoverEffectForPortfolio(){
 function appearOnScrollToTheBottom(){
     $(document.body).scroll(function() {
         if($(window).width() <= 550){
-            if($(document.body).scrollTop() + $(document.body).height() > $(document.body).height() + 2000) {
+            if($(document.body).scrollTop() + $(document.body).height() > $(document.body).height() + 1500) {
                 $("#scroll-up-button").addClass("show")
             }
             else{
