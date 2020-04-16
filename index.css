@@ -441,23 +441,38 @@ footer{
 /*Scroll up button*/
 .scroll-up-button{
     position: fixed;
-    bottom: 70px;
+    bottom: 15%;
     right: 5%;
+    color: white;
     display: block;
+    font-size: 18px;
+    font-weight: bold;
     height: 30px;
     width: 30px;
-    background-image: url('./images/scrollUp.png');
-    background-position: center;
-    background-size: cover;
-    background-color: transparent;
     border: none;
+    border-radius: 100%;
+    background-color: lightblue;
     cursor: pointer;
     display: none;
+    transition-duration: 1s;
 }
+
+.scroll-up-button:hover{
+    background-color: blue;
+}
+
+.scroll-up-button:active,.scroll-up-button:focus 
+{ outline-style: none; -moz-outline-style:none; }
  
 .show{
     display: block;
 }
+
+@media (hover: none) {
+    .scroll-up-button:hover {
+        background-color: rgba(173, 216, 230, 0.466);
+    }
+ }
 
   
 @keyframes come-in {
@@ -539,6 +554,7 @@ footer{
          height: 35px;
          width: 35px;
          bottom: 90px;
+         font-size: 22px;
      }
 }
 
@@ -645,6 +661,7 @@ footer{
         height: 50px;
         width: 50px;
         bottom: 120px;
+        font-size: 30px;
     }
 
 }
