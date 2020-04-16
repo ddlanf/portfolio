@@ -433,12 +433,34 @@ footer{
     animation: come-in 0.8s ease forwards;
   }
   
-  .already-visible {
+.already-visible {
     transform: translateY(0);
     animation: none;
-  }
+}
+
+/*Scroll up button*/
+.scroll-up-button{
+    position: fixed;
+    bottom: 70px;
+    right: 5%;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-image: url('./images/scrollUp.png');
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+ 
+.show{
+    display: block;
+}
+
   
-  @keyframes come-in {
+@keyframes come-in {
     to { transform: translateY(0); }
 }
 
@@ -511,6 +533,13 @@ footer{
       footer{
           font-size: 20px;
       }
+
+      /*Scroll up button*/
+     .scroll-up-button{
+         height: 35px;
+         width: 35px;
+         bottom: 90px;
+     }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -609,6 +638,13 @@ footer{
     /*Footer*/
     footer{
         font-size: 20px;
+    }
+
+      /*Scroll up button*/
+      .scroll-up-button{
+        height: 50px;
+        width: 50px;
+        bottom: 120px;
     }
 
 }

@@ -135,6 +135,25 @@ function hoverEffectForPortfolio(){
     });
 }
 
+function appearOnScrollToTheBottom(){
+    $(document.body).scroll(function() {
+         if($(document.body).scrollTop() + $(document.body).height() > $(document.body).height() + 2500) {
+               $("#scroll-up-button").addClass("show")
+         }
+         else{
+            $("#scroll-up-button").removeClass("show")
+         }
+    });
+}
+
+function ScrollUp(){
+    $("#scroll-up-button").click(function(){
+        console.log("Hello")
+        $("html, body").animate({
+            scrollTop: 0
+          }, 500);
+    })
+}
 
 //function to run all functions
 function runAllfunctions(){
@@ -142,6 +161,8 @@ function runAllfunctions(){
     deleteButtons();
     hoverEffectForBio();
     hoverEffectForPortfolio();
+    appearOnScrollToTheBottom();
+    ScrollUp();
 }
 
-$(runAllfunctions);
+$(runAllfunctions)
