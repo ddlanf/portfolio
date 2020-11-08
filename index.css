@@ -315,9 +315,9 @@ a.bio-button:visited, a.portfolio-button:visited{
 
 .cord{
    height: 50%;
-   width: 100%;
+   width: 100vw;
    position: absolute;
-   right: 5%;
+   right: 3%;
    z-index: 1;
    background-color: black;
 }
