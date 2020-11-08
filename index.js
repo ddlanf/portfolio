@@ -236,6 +236,7 @@ function dragOut(){
         event.preventDefault();  
         event.stopPropagation();
         if(phoneRotate){
+            console.log("Hello")
             batteryCounter = -1;
             batteryPercentage--;
             $(".rotate-top").css('display', `inline-block`);
