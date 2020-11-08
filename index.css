@@ -128,7 +128,9 @@ h1{
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
-    background-image: url(images/phone.png);
+    background-color: lightcyan;
+    border-radius: 48px;
+    background-image: url(images/phone2.png);
     background-repeat: no-repeat;
 }
 
@@ -246,6 +248,110 @@ a.bio-button:visited, a.portfolio-button:visited{
 .rotate-bottom:hover, .rotate-top:hover{
     background-color: purple;
     cursor: pointer;
+}
+
+.battery{
+    width: 100px;
+    height: 42px;
+    position: absolute;
+    right: 0;
+}
+
+.battery-gauge{
+    border-radius: 5px;
+    width: 45px;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    border: 2px solid black;
+}
+
+
+.battery-percentage{
+    width: 50%;
+    border-radius: 5px;
+    height: 11px;
+    background-color: lightgreen;
+}
+
+.battery-plus{
+    border-radius: 10px;
+    width: 4px;
+    height: 11px;
+    position: absolute;
+    bottom: 2.5px;
+    right: 53px;
+    background-color: black;
+}
+
+.socket-container{
+    bottom: -55px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 55px;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.socket{
+  width: 30%;
+  z-index: -1;
+  height: 55px;
+  bottom: 0;
+}
+
+/*Charger port for plugging in to the phone*/
+.type-c-port{
+    position: relative;
+    width: 100vw;
+    right: 90vw;
+    height: 30px;
+    z-index: 4;
+    top: 350px;
+}
+
+.cord{
+   height: 50%;
+   width: 100%;
+   position: absolute;
+   right: 5%;
+   z-index: 1;
+   background-color: black;
+}
+
+.port{
+   position: absolute;
+   right: 30px;
+   top: -25%;
+   width: 70px;
+   height: 100%;
+   background-color: black;
+   z-index: 3;
+}
+
+.plug{
+    position: absolute;
+    right: 5px;
+    top: -12.5%;
+    width: 30px;
+    border-radius: 5px;
+    height: 80%;
+    background-color: lightgrey;
+}
+
+.portDropZone{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: calc((100vw - 600px)/2 - 55px);
+    height: 800px;
+}
+
+.type-c-port:hover{
+    cursor: grab;
 }
 
 /*For the biography portion*/

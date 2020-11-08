@@ -1,4 +1,6 @@
 let phoneRotate = false;
+let batteryPercentage = 100;
+let batteryCounter = -1;
 
 
 //function to rotatephone
@@ -117,6 +119,7 @@ function hoverEffectForBio(){
     });
 }
 
+//change the color of the portfolio button
 function hoverEffectForPortfolio(){
     $(".portfolio-button").mouseenter( function(){
         if(phoneRotate === true){
@@ -135,6 +138,7 @@ function hoverEffectForPortfolio(){
     });
 }
 
+//Make the scroll to the top button appear
 function appearOnScrollToTheBottom(){
     $(document.body).scroll(function() {
         if($(window).width() <= 550){
@@ -156,12 +160,125 @@ function appearOnScrollToTheBottom(){
     });
 }
 
+//Diable the dropzone at certain height
+function disablePortDropZone(){
+    $(document.body).scroll(function() {
+        if($(document.body).scrollTop() + $(document.body).height() > $(document.body).height() + 900) {
+            $(".portDropZone").css('pointer-events', 'none')
+        }
+        else{
+            $(".portDropZone").css('pointer-events', 'all')
+        }
+    });
+}
+
+
 function ScrollUp(){
     $("#scroll-up-button").click(function(){
         $("html, body").animate({
             scrollTop: 0
           }, 500);
     })
+}
+
+//Draggable Charger port functions
+function dragStart(){
+    $(".type-c-port").on('dragstart', function(event){
+        setTimeout(function(){ $(".type-c-port").css('opacity', `0`) }, 0)
+        $(".plug").css('opacity', `1`)
+    })
+}
+
+function dragEnd(){
+    $(".type-c-port").on('dragend', function(event){
+        $(".type-c-port").css('opacity', `1`)
+        if(batteryCounter > 0 && phoneRotate){
+            $(".plug").css('opacity', `0`)
+        }
+    })
+}
+
+
+//Drop zone to return the charger port
+function dragEnterPortDropZone(){
+    $(".portDropZone")
+    .on('dragover', false) 
+    .on('drop', function(event){
+        event.preventDefault();  
+        event.stopPropagation();
+        batteryCounter = -1;
+        batteryPercentage--;
+        $(".rotate-top").css('display', `inline-block`);
+        $(".type-c-port").css('right', `90vw`)
+    })
+}
+
+//socket where the charger is plugged in
+function dragDrop(){
+    $(".socket")
+    .on('dragover', false) 
+    .on('drop', function(event){
+        event.preventDefault();  
+        event.stopPropagation();
+        if(phoneRotate){
+            batteryCounter = 1;
+            batteryPercentage+= 2;
+            $(".rotate-top").css('display', `none`);
+            $(".type-c-port").css('right', `calc((100vw - 600px)/2 + 600px - 30px)`)
+            $(".plug").css('opacity', `0`)
+        }
+    })
+}
+
+function dragOut(){
+    $(".socket")
+    .on('dragleave', function(event){
+        event.preventDefault();  
+        event.stopPropagation();
+        if(phoneRotate){
+            batteryCounter = -1;
+            batteryPercentage--;
+            $(".rotate-top").css('display', `inline-block`);
+            $(".type-c-port").css('right', `90vw`)
+        }
+    })
+}
+
+
+//This is the battery percentage fucntion, which updates every 0.2 second, dependig on whether or not the charger is plugged in
+function timer(){
+    setInterval(() => {
+        if(batteryPercentage > 0 && batteryPercentage <= 100){
+            $(".phone-container").css('background-color', 'lightcyan')
+            setTimeout(() => {
+                $(".bio-button").css('display', 'block')
+                $(".my-pic").css('opacity', '1')
+                $(".portfolio-button").css('display', 'block')
+            }, 1000);   
+            batteryPercentage = batteryCounter + batteryPercentage;
+        }
+        else if(batteryPercentage == 0){
+            this.setTimeout(()=>{
+                $(".phone-container").css('background-color', 'black')
+                $(".bio-button").css('display', 'none')
+                $(".my-pic").css('opacity', '0')
+                $(".portfolio-button").css('display', 'none')
+            }, 500)
+        }
+
+        $(".battery-percentage").css('width', `${batteryPercentage}%`)
+       
+        if(batteryPercentage < 30){
+            $(".battery-percentage").css('background-color', `red`)
+        }
+        else if(batteryPercentage < 60){
+            $(".battery-percentage").css('background-color', `yellow`)
+        }
+       
+        else{
+            $(".battery-percentage").css('background-color', `lightgreen`)
+        }
+    }, 200);
 }
 
 //function to run all functions
@@ -172,6 +289,13 @@ function runAllfunctions(){
     hoverEffectForPortfolio();
     appearOnScrollToTheBottom();
     ScrollUp();
+    dragStart();
+    dragEnd();
+    dragDrop();
+    dragOut();
+    timer();
+    dragEnterPortDropZone();
+    disablePortDropZone();
 }
 
 $(runAllfunctions)
