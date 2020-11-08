@@ -680,6 +680,7 @@ footer{
       .porfolio-links > a{
           margin-bottom: 2%;
       }
+
   
     /*Ending Bio*/
     .ending-about-me{
@@ -689,6 +690,7 @@ footer{
     .ending-bio{
         font-size: 2.5vw;
     }
+   
 
 
       /*Footer*/
@@ -705,6 +707,7 @@ footer{
 }
 
 @media only screen and (min-width: 1000px) {
+
     
 /*Header*/
 
@@ -733,6 +736,8 @@ footer{
     .moving-parts{
         width: 900px;
     }
+
+        
 /*Biography*/
     .about-me{
         font-size: 40px;
@@ -818,4 +823,11 @@ footer{
         bottom: 120px;
     }
 
+}
+
+@media only screen and (max-width: 1024px) {
+    /*Chargin port*/
+    .type-c-port, .portDropZone{
+        display: none;
+    }
 }

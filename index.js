@@ -179,7 +179,7 @@ function ScrollUp(){
             scrollTop: 0
           }, 500);
     })
-}
+}    
 
 //Draggable Charger port functions
 function dragStart(){
