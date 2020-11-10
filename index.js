@@ -6,19 +6,37 @@ let batteryCounter = -1;
 //function to rotatephone
 function rotatePhone(){
     $(".rotate-bottom").click(function(){
+        //disable button while rotating
+        $(".bio-button").css('pointer-events', `none`);
+        $(".portfolio-button").css('pointer-events', `none`);
+
+        //rotate the phone
         $(".phone-container").css('transform', `rotate(90deg)`);
         $(".rotate-bottom").css('display', `none`);
         setTimeout(displayTopButton, 600);
         phoneRotate = true;
+        
+        //reposition  and enable the buttons after rotate
         setTimeout(reorganizeContent, 1000);
+        setTimeout(()=>$(".bio-button").css('pointer-events', `all`), 1000);
+        setTimeout(()=>$(".portfolio-button").css('pointer-events', `all`), 1000);
     });
 
     $(".rotate-top").click(function(){
+        //disable button while rotating
+        $(".bio-button").css('pointer-events', `none`);
+        $(".portfolio-button").css('pointer-events', `none`);
+
+         //rotate the phone
         $(".phone-container").css('transform', `rotate(0deg)`);
         $(".rotate-top").css('display', `none`);    
         setTimeout(displayBottomButton, 600);
         phoneRotate = false;
-        setTimeout(reorganizeContent, 1000);
+
+        //reposition and enable the buttons after rotate
+        setTimeout(reorganizeContent, 1000);  
+        setTimeout(()=>$(".bio-button").css('pointer-events', `all`), 1000);
+        setTimeout(()=>$(".portfolio-button").css('pointer-events', `all`), 1000);
     });
 }
 
@@ -64,7 +82,7 @@ function reorganizeContent(){
             left: "0px"
         });
         $(".bio-button").css('transform', `rotate(-90deg)`);
-        
+
         $(".portfolio-button").animate({
             transform: "rotate(-90deg)",
             top: "120px",
