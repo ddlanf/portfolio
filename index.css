@@ -72,16 +72,58 @@ a:hover{
 .top-image{
     width: 40px;
     height: 40px;
-    margin:0;
-    -webkit-transition: width height 0.5s linear;
-    -moz-transition: width height 0.5s linear;
-    -o-transition: width height 0.5s linear;
-     transition: width height 0.5s linear;
+    margin: 0;
+    transition: all 0.3s ease;
 }
 
-img.top-image:hover{
+/* Social media brand colors - Light mode */
+.facebook-icon {
+    fill: #1877F2;
+}
+
+.github-icon {
+    fill: #181717;
+}
+
+.linkedin-icon {
+    fill: #0A66C2;
+}
+
+.gmail-icon {
+    fill: #EA4335;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .facebook-icon {
+    fill: #4267B2;
+    filter: brightness(1.2);
+}
+
+[data-theme="dark"] .github-icon {
+    fill: #ffffff;
+    filter: brightness(0.9);
+}
+
+[data-theme="dark"] .linkedin-icon {
+    fill: #0A66C2;
+    filter: brightness(1.2);
+}
+
+[data-theme="dark"] .gmail-icon {
+    fill: #EA4335;
+    filter: brightness(1.1);
+}
+
+/* Hover effects */
+.top-image:hover {
     width: 45px;
     height: 45px;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+[data-theme="dark"] .top-image:hover {
+    filter: brightness(1.3);
 }
 
 /* For introduction*/
@@ -564,35 +606,55 @@ a.bio-button:visited, a.portfolio-button:visited{
 }
 
 /* for ending bio */
-.ending-bio{
-    margin-top: 0;;
-    text-align: center;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1200px;
-    font-size: 16px;
-    line-height: 1.3;
+.ending-bio {
+    margin: 60px auto;
     text-align: left;
+    width: 90%;
+    max-width: 1200px;
+    font-size: 1.2em;
+    line-height: 1.6;
     font-family: 'Inria Serif', serif;
-    margin-bottom: 40px;;
     color: var(--font-color);
+    padding: 30px;
+    position: relative;
 }
 
-.ending-about-me{
-    font-size: 23px;
-    font-family: Oswald;
-    text-align: left;
+.hobby-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hobby-content p {
+    flex: 1;
     margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+
+.hobby-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.ending-about-me {
+    font-size: 1.8em;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    margin: 0 0 20px 0;
     color: var(--heading-color);
 }
 
-.ending-bio > p{
+.ending-bio p {
     text-align: left;
-    width: 90%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
 }
-
-
 
 /* for footer*/
 footer{
@@ -956,6 +1018,27 @@ footer{
         width: 100%;
         max-width: 280px;
         height: 50px;
+    }
+
+    .ending-bio {
+        margin: 40px auto;
+        padding: 25px 20px;
+        font-size: 1.1em;
+    }
+
+    .ending-about-me {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .hobby-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hobby-image {
+        width: 120px;
+        height: 120px;
     }
 }
 
