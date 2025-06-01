@@ -14,6 +14,12 @@
     <!--This is the header-->
     <header class="top">
         <p class="header-text">Daniel Laufenberg</p>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
         <div class="logos">
             <a href="https://www.facebook.com/daniel.laufenberg.925" target="_blank" rel="noopener noreferrer"><img class="top-image" src="images/facebook.png"  alt="facebook logo"/></a>
             <a href="https://github.com/ddlanf" target="_blank" rel="noopener noreferrer"><img class="top-image" src = "images/github.png" alt="Github logo"/></a>
@@ -27,7 +33,7 @@
         <section class="introduction">
             <h1>
                 <span class="my-name">Hi, my name is Daniel.</span>
-                I’m a full-stack developer, a Judoka, and a minimalistic tech enthusiast, who loves all the new technologies,
+                I'm a full-stack developer, a Judoka, an`d a minimalistic tech enthusiast, who loves all the new technologies,
                 but still chooses to buy a minimal specs phone becasue it just does what it needs for my use
             </h1>
         </section>
@@ -76,7 +82,7 @@
                 </p>
                 <p>
                     I LOVE coding because it makes my visualizations come to life, and discovering all the 
-                    different approaches when working in a team. I get to be inspired by other programmer’s 
+                    different approaches when working in a team. I get to be inspired by other programmer's 
                     perspectives when solving the same problem and be able to combine my unique ideas to come up with best solution 
                     together. 
                     However, I personally think the real beauty of coding lies in the process of problem-solving, 
@@ -100,156 +106,159 @@
         <!--List all my porfolios here-->
 
         <section class="portfolio" id="portfolio">
-
             <div class="porfolio-heading">
                 <div class="left-line"></div>
                 <h2>My Portfolio</h2>
                 <div class="right-line"></div>
             </div>
 
-            <div class="project-box">
-                <h3 class="title">Hawaii Quiz App</h3>
-                <img class="project-image1" src="images/Quiz-App1.PNG" alt="Hawaii Quiz-app image"/>
-                <img class="project-image2" src="images/Quiz-App2.png" alt="Hawaii Quiz-app image full screen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/html-5.png" alt="html logo"/> 
-                    <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo project" src="images/javascript.png" alt="Javascript logo"/>
-                    <img class="skill-logo project" src="images/jquery.png" alt="jQuery logo"/>
-                </div>
-                <p class="description">
-                    Aloha! Hawai’i, the land of paradise and home to the most popular vacation destination in the world! 
-                    Here is a quiz app that has a set of 5 questions and keeps track of your score. 
-                    Living in Hawaii and being a former tour guide I have always wondered how much people on the 
-                    mainland and other countries know about Hawai’i. The app features a restart button, a retry button after 
-                    finishing the quiz and responsive design.   
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://ddlanf.github.io/Quiz-App/" target="_blank" rel="noopener noreferrer">Live App</a>
-                    <a class="link" href="https://repl.it/@ddlanf/Quiz-App-1" target="_blank" rel="noopener noreferrer">Repl Link</a>
-                </div>
-            </div>
+            <div class="carousel-container">
+                <button class="carousel-button prev" aria-label="Previous project">&#10094;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <!-- Project 1 -->
+                        <div class="project-box carousel-slide">
+                            <h3 class="title">Hawaii Quiz App</h3>
+                            <img class="project-image1" src="images/Quiz-App1.PNG" alt="Hawaii Quiz-app image"/>
+                            <img class="project-image2" src="images/Quiz-App2.png" alt="Hawaii Quiz-app image full screen"/>
+                            <div class="technology-used skill-images">
+                                <img class="skill-logo project" src="images/html-5.png" alt="html logo"/> 
+                                <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
+                                <img class="skill-logo project" src="images/javascript.png" alt="Javascript logo"/>
+                                <img class="skill-logo project" src="images/jquery.png" alt="jQuery logo"/>
+                            </div>
+                            <p class="description">
+                                Aloha! Hawai'i, the land of paradise and home to the most popular vacation destination in the world! 
+                                Here is a quiz app that has a set of 5 questions and keeps track of your score. 
+                                Living in Hawaii and being a former tour guide I have always wondered how much people on the 
+                                mainland and other countries know about Hawai'i. The app features a restart button, a retry button after 
+                                finishing the quiz and responsive design.   
+                            </p>
+                            <div class="porfolio-links">
+                                <a class="link" href="https://ddlanf.github.io/Quiz-App/" target="_blank" rel="noopener noreferrer">Live App</a>
+                                <a class="link" href="https://repl.it/@ddlanf/Quiz-App-1" target="_blank" rel="noopener noreferrer">Repl Link</a>
+                            </div>
+                        </div>
 
-            <div class="line"></div>
+                        <!-- Project 2 -->
+                        <div class="project-box carousel-slide">
+                            <h3 class="title">Device Hunt</h3>
+                            <img class="project-image1" src="images/DeviceHunt.PNG" alt="FindMyDevice image"/>
+                            <img class="project-image2" src="images/DeviceHunt2.PNG" alt="FindMyDevice image fullscreen"/>
+                            <div class="technology-used skill-images">
+                                <img class="skill-logo project" src="images/html-5.png" alt="html logo"/> 
+                                <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
+                                <img class="skill-logo project" src="images/javascript.png" alt="Javascript logo"/>
+                                <img class="skill-logo project" src="images/jquery.png" alt="jQuery logo"/>
+                            </div>
+                            <p class="description">
+                                As a minimalistic tech enthusiast, I always want to find a device that has just 
+                                enough specs to suit my needs and offers a lot of capabilities for its price. 
+                                But specs alone do not tell you how good the device actually is. 
+                                So this app, on top of showing all the specs, will give you a list of review videos 
+                                of the device you have searched, perfect for those looking for a device suit 
+                                their needs. Searches can be filtered by phone brand, device, and model. 
+                                The app uses Fono and Youtube API. 
+                            </p>
+                            <div class="porfolio-links">
+                                <a class="link" href="https://ddlanf.github.io/DeviceHunt" target="_blank" rel="noopener noreferrer">Live App</a>
+                                <a class="link" href="https://github.com/ddlanf/DeviceHunt" target="_blank" rel="noopener noreferrer">Github Repo</a>
+                            </div>
+                        </div>
 
-            <div class="project-box">
-                <h3 class="title">Device Hunt</h3>
-                <img class="project-image1" src="images/DeviceHunt.PNG" alt="FindMyDevice image"/>
-                <img class="project-image2" src="images/DeviceHunt2.PNG" alt="FindMyDevice image fullscreen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/html-5.png" alt="html logo"/> 
-                    <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo project" src="images/javascript.png" alt="Javascript logo"/>
-                    <img class="skill-logo project" src="images/jquery.png" alt="jQuery logo"/>
-                </div>
-                <p class="description">
-                    As a minimalistic tech enthusiast, I always want to find a device that has just 
-                    enough specs to suit my needs and offers a lot of capabilities for its price. 
-                    But specs alone do not tell you how good the device actually is. 
-                    So this app, on top of showing all the specs, will give you a list of review videos 
-                    of the device you have searched, perfect for those looking for a device suit 
-                    their needs. Searches can be filtered by phone brand, device, and model. 
-                    The app uses Fono and Youtube API. 
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://ddlanf.github.io/DeviceHunt" target="_blank" rel="noopener noreferrer">Live App</a>
-                    <a class="link" href="https://github.com/ddlanf/DeviceHunt" target="_blank" rel="noopener noreferrer">Github Repo</a>
-                </div>
-            </div>
+                        <!-- Project 3 -->
+                        <div class="project-box carousel-slide">
+                            <h3 class="title">Last Minute Eats</h3>
+                            <img class="project-image1" src="images/last-minute-eats2.PNG" alt="Last-minute-eats image"/>
+                            <img class="project-image2" src="images/last-minute-eats.PNG" alt="Last-minute-eats image fullscreen"/>
+                            <div class="technology-used skill-images">
+                                <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
+                                <img class="skill-logo project" src="images/react.png" alt="react logo"/>
+                                <img class="skill-logo project" src="images/redux.png" alt="font awesome logo"/>
+                                <img class="skill-logo project" src="images/nodejs.png" alt="nodejs logo"/>
+                                <img class="skill-logo project" src="images/posgresSQL.png" alt="posgres logo"/>
+                            </div>
+                            <p class="description">
+                                Being a part-time worker and learning to code full-time. I could not afford to spend hours preparing a meal. 
+                                So I decided why not make an app where people can only view recipes that are short and quick? 
+                                Last Minute Eats has all the recipes perfect for those in a hurry or just lazy with less than 5 ingredients and 7 steps. 
+                            </p>
+                            <div class="porfolio-links">
+                                <a class="link" href="https://last-minute-eats.now.sh" target="_blank" rel="noopener noreferrer">Live App</a>
+                                <a class="link" href="https://github.com/ddlanf/Last-minutes-eats-client" target="_blank" rel="noopener noreferrer">Github Client Repo</a>
+                                <a class="link" href="https://github.com/ddlanf/Last-minute-eats-server" target="_blank" rel="noopener noreferrer">Github Server Repo</a>
+                            </div>
+                        </div>
 
-            <div class="line"></div>
+                        <!-- Project 4 -->
+                        <div class="project-box carousel-slide">
+                            <h3 class="title">My Used Car Salesman</h3>
+                            <img class="project-image1" src="images/myusedcarsalesman2.PNG" alt="Myusedcarsalesman image"/>
+                            <img class="project-image2" src="images/myusedcarsalesman.PNG" alt="Myusedcarsalesman image fullscreen"/>
+                            <div class="technology-used skill-images">
+                                <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
+                                <img class="skill-logo project" src="images/react.png" alt="react logo"/>
+                                <img class="skill-logo project" src="images/nodejs.png" alt="nodejs logo"/>
+                                <img class="skill-logo project" src="images/jwt.jpg" alt="jwt logo"/>
+                                <img class="skill-logo project" src="images/posgresSQL.png" alt="posgres logo"/>
+                            </div>
+                            <p class="description">
+                                I had a very difficult time selling my beloved Mazda 2. Dealing with half-interested buyers, low ballers, 
+                                and ones that decide to ditch at the last minute. Because I understand all the hassle people go through 
+                                when selling their used car, I decided to make an app that saves car owner's time by finding individuals 
+                                who can sell their car and those who want to make some extra bucks by selling other people's cars. 
+                                All the user information on this app is protected with the JWT authentication system. 
+                            </p>
+                            <div class="porfolio-links">
+                                <a class="link" href="https://myusedcarsalesman.now.sh" target="_blank" rel="noopener noreferrer">Live App</a>
+                                <a class="link" href="https://github.com/ddlanf/MyUsedCarSalesman-client" target="_blank" rel="noopener noreferrer">Github Client Repo</a>
+                                <a class="link" href="https://github.com/ddlanf/MyUsedCarSalesman-api-auth" target="_blank" rel="noopener noreferrer">Github Server Repo</a>    
+                            </div>
+                        </div>
 
-            <div class="project-box">
-                <h3 class="title">Last Minute Eats</h3>
-                <img class="project-image1" src="images/last-minute-eats2.PNG" alt="Last-minute-eats image"/>
-                <img class="project-image2" src="images/last-minute-eats.PNG" alt="Last-minute-eats image fullscreen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo project" src="images/react.png" alt="react logo"/>
-                    <img class="skill-logo project" src="images/redux.png" alt="font awesome logo"/>
-                    <img class="skill-logo project" src="images/nodejs.png" alt="nodejs logo"/>
-                    <img class="skill-logo project" src="images/posgresSQL.png" alt="posgres logo"/>
-                </div>
-                <p class="description">
-                    Being a part-time worker and learning to code full-time. I could not afford to spend hours preparing a meal. 
-                    So I decided why not make an app where people can only view recipes that are short and quick? 
-                    Last Minute Eats has all the recipes perfect for those in a hurry or just lazy with less than 5 ingredients and 7 steps. 
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://last-minute-eats.now.sh" target="_blank" rel="noopener noreferrer">Live App</a>
-                    <a class="link" href="https://github.com/ddlanf/Last-minutes-eats-client" target="_blank" rel="noopener noreferrer">Github Client Repo</a>
-                    <a class="link" href="https://github.com/ddlanf/Last-minute-eats-server" target="_blank" rel="noopener noreferrer">Github Server Repo</a>
-                </div>
-            </div>
+                        <!-- Project 5 -->
+                        <div class="project-box carousel-slide">
+                            <h3 class="title">QouteIX</h3>
+                            <img class="project-image1" src="images/qouteix2.png" alt="QouteIX image"/>
+                            <img class="project-image2" src="images/qouteix.png" alt="QouteIX image fullscreen"/>
+                            <div class="technology-used skill-images">
+                                <img class="skill-logo project" src="images/react.png" alt="react logo"/>
+                                <img class="skill-logo project" src="images/firebase.png" alt="firebase logo"/>
+                                <img class="skill-logo project" src="images/reactPDF.png" alt="reactPDF logo"/>
+                                <img class="skill-logo project" src="images/Bootstrap.png" alt="posgres logo"/>
+                                <img class="skill-logo project" src="images/formik.png" alt="posgres logo"/>
+                            </div>
+                            <p class="description">
+                                Qouteix is a proposal builder app aimed to help businesses make beautiful project proposals with an 
+                                intuitive user interface and offer various useful features such as pdf generation, an internal emailing system, 
+                                and private/public item database. This is the first app I have successfully built as a professional
+                                developer at Htech Studio.
+                            </p>
+                            <div class="porfolio-links">
+                                <a class="link" href="https://www.quoteix.com" target="_blank" rel="noopener noreferrer">Live App</a>
+                            </div>
+                        </div>
 
-            <div class="line"></div>
-
-            <div class="project-box">
-                <h3 class="title">My Used Car Salesman</h3>
-                <img class="project-image1" src="images/myusedcarsalesman2.PNG" alt="Myusedcarsalesman image"/>
-                <img class="project-image2" src="images/myusedcarsalesman.PNG" alt="Myusedcarsalesman image fullscreen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo project" src="images/react.png" alt="react logo"/>
-                    <img class="skill-logo project" src="images/nodejs.png" alt="nodejs logo"/>
-                    <img class="skill-logo project" src="images/jwt.jpg" alt="jwt logo"/>
-                    <img class="skill-logo project" src="images/posgresSQL.png" alt="posgres logo"/>
+                        <!-- Project 6 -->
+                        <div class="project-box carousel-slide">
+                            <h3 class="title">Home Earth</h3>
+                            <h3 class="title">Coming soon!</h3>
+                            <div class="technology-used skill-images">
+                                <img class="skill-logo project" src="images/react.png" alt="react logo"/>
+                                <img class="skill-logo project" src="images/firebase.png" alt="firebase logo"/>
+                                <img class="skill-logo project" src="images/flutter.png" alt="reactPDF logo"/>
+                                <img class="skill-logo project" src="images/dart.png" alt="posgres logo"/>
+                            </div>
+                            <p class="description">
+                                Homeearth is a mobile app for posting non-profit organization events, which aims to encourage more people in the community to voluteer.
+                            </p>
+                            <div class="porfolio-links">
+                                <a class="link" href="https://homeearthproject.com/index" target="_blank" rel="noopener noreferrer">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="description">
-                    I had a very difficult time selling my beloved Mazda 2. Dealing with half-interested buyers, low ballers, 
-                    and ones that decide to ditch at the last minute. Because I understand all the hassle people go through 
-                    when selling their used car, I decided to make an app that saves car owner’s time by finding individuals 
-                    who can sell their car and those who want to make some extra bucks by selling other people’s cars. 
-                    All the user information on this app is protected with the JWT authentication system. 
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://myusedcarsalesman.now.sh" target="_blank" rel="noopener noreferrer">Live App</a>
-                    <a class="link" href="https://github.com/ddlanf/MyUsedCarSalesman-client" target="_blank" rel="noopener noreferrer">Github Client Repo</a>
-                    <a class="link" href="https://github.com/ddlanf/MyUsedCarSalesman-api-auth" target="_blank" rel="noopener noreferrer">Github Server Repo</a>    
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="project-box">
-                <h3 class="title">QouteIX</h3>
-                <img class="project-image1" src="images/qouteix2.png" alt="QouteIX image"/>
-                <img class="project-image2" src="images/qouteix.png" alt="QouteIX image fullscreen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/react.png" alt="react logo"/>
-                    <img class="skill-logo project" src="images/firebase.png" alt="firebase logo"/>
-                    <img class="skill-logo project" src="images/reactPDF.png" alt="reactPDF logo"/>
-                    <img class="skill-logo project" src="images/Bootstrap.png" alt="posgres logo"/>
-                    <img class="skill-logo project" src="images/formik.png" alt="posgres logo"/>
-                </div>
-                <p class="description">
-                    Qouteix is a proposal builder app aimed to help businesses make beautiful project proposals with an 
-                    intuitive user interface and offer various useful features such as pdf generation, an internal emailing system, 
-                    and private/public item database. This is the first app I have successfully built as a professional
-                    developer at Htech Studio.
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://www.quoteix.com" target="_blank" rel="noopener noreferrer">Live App</a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="project-box last">
-                <h3 class="title">Home Earth</h3>
-                <h3 class="title">Coming soon!</h3>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/react.png" alt="react logo"/>
-                    <img class="skill-logo project" src="images/firebase.png" alt="firebase logo"/>
-                    <img class="skill-logo project" src="images/flutter.png" alt="reactPDF logo"/>
-                    <img class="skill-logo project" src="images/dart.png" alt="posgres logo"/>
-                </div>
-                <p class="description">
-                    Homeearth is a mobile app for posting non-profit organization events, which aims to encourage more people in the community to voluteer.
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://homeearthproject.com/index" target="_blank" rel="noopener noreferrer">Project Page</a>
-                </div>
+                <button class="carousel-button next" aria-label="Next project">&#10095;</button>
             </div>
         </section>
 

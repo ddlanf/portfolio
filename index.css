@@ -17,6 +17,7 @@ body{
     margin: 0;
     background-color: whitesmoke;
     color: black;
+    transition: background-color 0.3s ease;
 }
 
 
@@ -45,6 +46,8 @@ a:hover{
     top:0;
     padding: 10px;
     z-index: 100;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .header-text{
@@ -54,10 +57,12 @@ a:hover{
     width: 20%;
     font-size: 18px;
     font-family: Oswald;
+    color: var(--font-color);
 }
 
 .logos{
     margin-left: 30%;
+    margin-right: 100px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -373,6 +378,7 @@ a.bio-button:visited, a.portfolio-button:visited{
     font-size: 23px;
     font-family: Oswald;
     text-align: center;
+    color: var(--heading-color);
 }
 
 .skill-images{
@@ -395,22 +401,95 @@ a.bio-button:visited, a.portfolio-button:visited{
 
 /*  Porfolio */
 
-.portfolio{
+.portfolio {
     padding-top: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: auto;
-    margin-left: auto;
     width: 100%;
+    position: relative;
 }
 
-.project-box{
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.carousel-track-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+}
+
+.carousel-slide {
+    position: relative;
+    min-width: 100%;
+    padding: 15px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    color: var(--bg-color);
+    font-size: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button:hover {
+    opacity: 1;
+}
+
+.carousel-button.prev {
+    left: -20px;
+}
+
+.carousel-button.next {
+    right: -20px;
+}
+
+/* Project Box Updates */
+.project-box {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 0;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+/* Hide the line dividers */
+.line {
+    display: none;
 }
 
 .project-box.last{
@@ -442,13 +521,6 @@ a.bio-button:visited, a.portfolio-button:visited{
     width: 30%;
 }
 
-.line{
-    border: 2px dotted lightblue;
-    margin-top: 18%;
-    margin-bottom: 18%;
-    width: 90%;
-}
-
 h2{
     font-family: Oswald;
     font-size: 32px;
@@ -459,17 +531,18 @@ h2{
 
 .title{
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Inria Serif', serif;
     font-weight: bold;
-    margin-bottom: 2%;
+    margin-bottom: 15px;
+    color: var(--heading-color);
 }
 
 .project-image1, .project-image2{
-    border: none;
-    min-width: 300px;
-    width:60%;
+    width: 85%;
     max-width: 500px;
+    height: auto;
+    margin: 10px 0;
 }
 
 .project-image2{
@@ -478,13 +551,13 @@ h2{
 }
 
 .description{
-    margin-top: 3px;
     font-size: 15px;
-    min-width: 300px;
-    width: 60%;
-    line-height: 1.2;
+    width: 95%;
+    line-height: 1.4;
+    margin: 15px 0;
     font-family: 'Inria Serif', serif;
     margin-bottom: 2px;
+    color: var(--font-color);
 }
 
 .porfolio-links{
@@ -501,6 +574,13 @@ h2{
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
+    color: var(--link-color);
+    border: 1px solid var(--border-color);
+}
+
+.link:hover{
+    background-color: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .technology-used{
@@ -532,6 +612,7 @@ h2{
     text-align: left;
     font-family: 'Inria Serif', serif;
     margin-bottom: 40px;;
+    color: var(--font-color);
 }
 
 .ending-about-me{
@@ -539,6 +620,7 @@ h2{
     font-family: Oswald;
     text-align: left;
     margin: 0;
+    color: var(--heading-color);
 }
 
 .ending-bio > p{
@@ -627,7 +709,8 @@ footer{
     }
   
     .logos{
-          margin-left: 55%;
+          margin-left: 45%;
+          margin-right: 120px;
     }
 
     /*Introduction*/
@@ -704,6 +787,10 @@ footer{
          width: 35px;
          bottom: 90px;
      }
+
+    .theme-switch-wrapper em {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -717,7 +804,8 @@ footer{
     }
 
     .logos{
-        margin-left: 75%;
+        margin-left: 65%;
+        margin-right: 140px;
     }
     
 
@@ -830,4 +918,189 @@ footer{
     .type-c-port, .portDropZone{
         display: none;
     }
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-container {
+        width: 95%;
+        padding: 0 45px;
+    }
+
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .carousel-button.prev {
+        left: -10px;
+    }
+
+    .carousel-button.next {
+        right: -10px;
+    }
+
+    .project-box {
+        padding: 15px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .carousel-container {
+        width: 80%;
+        padding: 0 80px;
+    }
+
+    .project-image1, .project-image2 {
+        max-width: 600px;
+    }
+
+    .carousel-button.prev {
+        left: -30px;
+    }
+
+    .carousel-button.next {
+        right: -30px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .carousel-container {
+        width: 75%;
+        max-width: 1200px;
+    }
+}
+
+/* Dark mode variables */
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --border-color: #ddd;
+    --link-color: #302AE6;
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+    --border-color: #444;
+    --link-color: #9A97F3;
+}
+
+/* Theme switch styles */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 101;
+}
+
+.theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: var(--font-color);
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Apply dark mode styles to existing elements */
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    transition: background-color 0.3s ease;
+}
+
+.top {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-text {
+    color: var(--font-color);
+}
+
+.introduction h1, .about-me, .ending-about-me {
+    color: var(--heading-color);
+}
+
+.project-box {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.project-box .title {
+    color: var(--heading-color);
+}
+
+.project-box .description {
+    color: var(--font-color);
+}
+
+.porfolio-links .link {
+    color: var(--link-color);
+    border: 1px solid var(--border-color);
+}
+
+.porfolio-links .link:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.line {
+    background-color: var(--border-color);
 }

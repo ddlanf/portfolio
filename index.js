@@ -2,6 +2,28 @@ let phoneRotate = false;
 let batteryPercentage = 100;
 let batteryCounter = -1;
 
+// Dark Mode Toggle
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
 
 //function to rotatephone
 function rotatePhone(){
@@ -318,3 +340,94 @@ function runAllfunctions(){
 }
 
 $(runAllfunctions)
+
+// Carousel functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel-button.next');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    
+    let currentSlide = 0;
+    
+    // Function to update slide positions and states
+    const updateSlides = (targetIndex) => {
+        // Handle circular navigation
+        if (targetIndex < 0) {
+            targetIndex = slides.length - 1;
+        } else if (targetIndex >= slides.length) {
+            targetIndex = 0;
+        }
+        
+        // Update transform
+        track.style.transform = `translateX(-${targetIndex * 100}%)`;
+        
+        // Update active states and opacity
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            if (index === targetIndex) {
+                slide.classList.add('active');
+            }
+        });
+        
+        currentSlide = targetIndex;
+    };
+    
+    // Next button click
+    nextButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        updateSlides(currentSlide + 1);
+    });
+    
+    // Previous button click
+    prevButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        updateSlides(currentSlide - 1);
+    });
+    
+    // Add keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            updateSlides(currentSlide + 1);
+        } else if (e.key === 'ArrowLeft') {
+            updateSlides(currentSlide - 1);
+        }
+    });
+    
+    // Add touch support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+    
+    track.addEventListener('touchmove', (e) => {
+        touchEndX = e.touches[0].clientX;
+    });
+    
+    track.addEventListener('touchend', () => {
+        const difference = touchStartX - touchEndX;
+        if (Math.abs(difference) > 50) { // Minimum swipe distance
+            if (difference > 0) {
+                // Swipe left, show next
+                updateSlides(currentSlide + 1);
+            } else {
+                // Swipe right, show previous
+                updateSlides(currentSlide - 1);
+            }
+        }
+    });
+    
+    // Initialize first slide
+    updateSlides(0);
+    
+    // Update slide positions on window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            updateSlides(currentSlide);
+        }, 250);
+    });
+});
