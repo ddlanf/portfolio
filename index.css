@@ -1038,6 +1038,48 @@ footer{
         width: 120px;
         height: 120px;
     }
+
+    /*Header*/
+    .header-text{
+        font-size: 25px;
+        top: -15px;
+        width: 50%;
+    }
+
+    .logos{
+        margin-left: 45%;
+        margin-right: 120px;
+    }
+
+    .top-image {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+    }
+
+    .top-image:hover {
+        width: 28px;
+        height: 28px;
+        transform: translateY(-2px);
+    }
+
+    /*Introduction*/
+    .my-name{
+        font-size: 5vw;
+    }
+    h1{
+        font-size: 4vw;
+        width: 80%;
+    }
+ 
+    /*Biography*/
+    .about-me{
+        font-size: 5vw;
+    }
+
+    .bio{
+        font-size: 2.5vw;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
