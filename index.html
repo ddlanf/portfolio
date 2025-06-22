@@ -14,11 +14,33 @@
     <!--This is the header-->
     <header class="top">
         <p class="header-text">Daniel Laufenberg</p>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
         <div class="logos">
-            <a href="https://www.facebook.com/daniel.laufenberg.925" target="_blank" rel="noopener noreferrer"><img class="top-image" src="images/facebook.png"  alt="facebook logo"/></a>
-            <a href="https://github.com/ddlanf" target="_blank" rel="noopener noreferrer"><img class="top-image" src = "images/github.png" alt="Github logo"/></a>
-            <a href= "https://www.linkedin.com/in/daniel-laufenberg-0a6693194/" target="_blank" rel="noopener noreferrer"><img class="top-image" src="images/linkedIn.png" alt="LinkIn Logo"/></a>
-            <a href="mailto:danlanfen26@gmail.com" target="_blank" rel="noopener noreferrer"><img class="top-image" src="images/gmail.png"  alt="email logo"/></a>
+            <a href="https://www.facebook.com/daniel.laufenberg.925" target="_blank" rel="noopener noreferrer">
+                <svg class="top-image facebook-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/ddlanf" target="_blank" rel="noopener noreferrer">
+                <svg class="top-image github-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-laufenberg-0a6693194/" target="_blank" rel="noopener noreferrer">
+                <svg class="top-image linkedin-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="mailto:daniel.laufenberg10@gmail.com" target="_blank" rel="noopener noreferrer">
+                <svg class="top-image gmail-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                </svg>
+            </a>
         </div>
     </header>
 
@@ -27,8 +49,8 @@
         <section class="introduction">
             <h1>
                 <span class="my-name">Hi, my name is Daniel.</span>
-                I’m a full-stack developer, a Judoka, and a minimalistic tech enthusiast, who loves all the new technologies,
-                but still chooses to buy a minimal specs phone becasue it just does what it needs for my use
+                I'm a software engineer who loves new technologies but prefers implementing practical and pragmatic solutions to every problem. 
+                Like my trusty phone below, I believe in keeping things simple because one elegant solution usually works better than ten unnecessary features.
             </h1>
         </section>
 
@@ -56,7 +78,7 @@
                 </div>
                 <div class="my-pic"></div>
                 <a class="bio-button" href="#bio">Bio</a>
-                <a class="portfolio-button" href="#portfolio">Portfolio</a>
+                <a class="portfolio-button" href="#portfolio">Expertise</a>
                 <div class="socket-container">
                     <div class="socket"></div>
                 </div>
@@ -68,198 +90,102 @@
         <section class="bio" id="bio">
                 <h1 class="about-me">About Me</h1>
                 <p>
-                    I am a full stack developer from Hawaii, who recently moved to Seattle to find better opportunities for myself in the tech industry. 
-                    Software development was my all-time favorite subject while I was an engineering student in college. 
-                    So much so that I made the decision to depart from my academic life to attend an online 
-                    web development bootcamp at Bloc despite having excellent academic records and shortly after landing a contract job as a full-stack developer at Htech Studio.
-                    I can say for sure this was the BEST decision I have ever made!
+                    I am a Software Developer and former Azure Support Engineer. Originally from Japan and raised in Hawaii, 
+                    I am currently based in the Greater Seattle Area. In my current role, I focus on backend development 
+                    with .NET Core and Azure, while maintaining proficiency in modern frontend technologies.
                 </p>
                 <p>
-                    I LOVE coding because it makes my visualizations come to life, and discovering all the 
-                    different approaches when working in a team. I get to be inspired by other programmer’s 
-                    perspectives when solving the same problem and be able to combine my unique ideas to come up with best solution 
-                    together. 
-                    However, I personally think the real beauty of coding lies in the process of problem-solving, 
-                    where one must gain new knowledge or acquire different thinking to solve the problem, 
-                    which makes us all grow as a programmer.
+                    I am passionate about designing and implementing software solutions that are reliable, maintainable, 
+                    and aligned with business objectives. While I have experience with various frameworks and tools, 
+                    I believe in choosing the most appropriate technology for each specific challenge. This practical 
+                    approach, combined with my bilingual background, allows me to bring a unique perspective to 
+                    problem-solving and team collaboration.
                 </p>
-                <p>Some of the technologies I work with include, but not limited to</p>
-                <div class="skill-images">
-                    <img class="skill-logo " src="images/html-5.png" alt="html logo"/> 
-                    <img class="skill-logo" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo" src="images/javascript.png" alt="Javascript logo"/>
-                    <img class="skill-logo" src="images/jquery.png" alt="jQuery logo"/>
-                    <img class="skill-logo" src="images/react.png" alt="React logo"/>
-                    <img class="skill-logo" src="images/Bootstrap.png" alt="Bootstrap logo"/>
-                    <img class="skill-logo" src="images/nodejs.png" alt="nodejs logo"/>
-                    <img class="skill-logo" src="images/posgresSQL.png" alt="posgres logo"/>
-                    <img class="skill-logo" src="images/flutter.png" alt="flutter logo"/>
-                </div>
         </section>
 
         <!--List all my porfolios here-->
 
         <section class="portfolio" id="portfolio">
-
             <div class="porfolio-heading">
                 <div class="left-line"></div>
-                <h2>My Portfolio</h2>
+                <h2>Technical Expertise</h2>
                 <div class="right-line"></div>
             </div>
 
-            <div class="project-box">
-                <h3 class="title">Hawaii Quiz App</h3>
-                <img class="project-image1" src="images/Quiz-App1.PNG" alt="Hawaii Quiz-app image"/>
-                <img class="project-image2" src="images/Quiz-App2.png" alt="Hawaii Quiz-app image full screen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/html-5.png" alt="html logo"/> 
-                    <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo project" src="images/javascript.png" alt="Javascript logo"/>
-                    <img class="skill-logo project" src="images/jquery.png" alt="jQuery logo"/>
+            <div class="technology-stack">
+                <!-- Web Technologies -->
+                <div class="stack-section">
+                    <h3>Web & Frontend</h3>
+                    <div class="technology-used skill-images">
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo"/> 
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js logo"/>
+                    </div>
                 </div>
-                <p class="description">
-                    Aloha! Hawai’i, the land of paradise and home to the most popular vacation destination in the world! 
-                    Here is a quiz app that has a set of 5 questions and keeps track of your score. 
-                    Living in Hawaii and being a former tour guide I have always wondered how much people on the 
-                    mainland and other countries know about Hawai’i. The app features a restart button, a retry button after 
-                    finishing the quiz and responsive design.   
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://ddlanf.github.io/Quiz-App/" target="_blank" rel="noopener noreferrer">Live App</a>
-                    <a class="link" href="https://repl.it/@ddlanf/Quiz-App-1" target="_blank" rel="noopener noreferrer">Repl Link</a>
+
+                <!-- Backend Technologies -->
+                <div class="stack-section">
+                    <h3>Backend & APIs</h3>
+                    <div class="technology-used skill-images">
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js logo"/>
+                    </div>
+                </div>
+
+                <!-- Database Technologies -->
+                <div class="stack-section">
+                    <h3>Databases & Storage</h3>
+                    <div class="technology-used skill-images">
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo"/>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="stack-section">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="technology-used skill-images">
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo"/>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="stack-section">
+                    <h3>Development Tools</h3>
+                    <div class="technology-used skill-images">
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="NPM logo"/>
+                        <img class="skill-logo project" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo"/>
+                    </div>
                 </div>
             </div>
 
-            <div class="line"></div>
-
-            <div class="project-box">
-                <h3 class="title">Device Hunt</h3>
-                <img class="project-image1" src="images/DeviceHunt.PNG" alt="FindMyDevice image"/>
-                <img class="project-image2" src="images/DeviceHunt2.PNG" alt="FindMyDevice image fullscreen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/html-5.png" alt="html logo"/> 
-                    <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo project" src="images/javascript.png" alt="Javascript logo"/>
-                    <img class="skill-logo project" src="images/jquery.png" alt="jQuery logo"/>
-                </div>
-                <p class="description">
-                    As a minimalistic tech enthusiast, I always want to find a device that has just 
-                    enough specs to suit my needs and offers a lot of capabilities for its price. 
-                    But specs alone do not tell you how good the device actually is. 
-                    So this app, on top of showing all the specs, will give you a list of review videos 
-                    of the device you have searched, perfect for those looking for a device suit 
-                    their needs. Searches can be filtered by phone brand, device, and model. 
-                    The app uses Fono and Youtube API. 
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://ddlanf.github.io/DeviceHunt" target="_blank" rel="noopener noreferrer">Live App</a>
-                    <a class="link" href="https://github.com/ddlanf/DeviceHunt" target="_blank" rel="noopener noreferrer">Github Repo</a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="project-box">
-                <h3 class="title">Last Minute Eats</h3>
-                <img class="project-image1" src="images/last-minute-eats2.PNG" alt="Last-minute-eats image"/>
-                <img class="project-image2" src="images/last-minute-eats.PNG" alt="Last-minute-eats image fullscreen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo project" src="images/react.png" alt="react logo"/>
-                    <img class="skill-logo project" src="images/redux.png" alt="font awesome logo"/>
-                    <img class="skill-logo project" src="images/nodejs.png" alt="nodejs logo"/>
-                    <img class="skill-logo project" src="images/posgresSQL.png" alt="posgres logo"/>
-                </div>
-                <p class="description">
-                    Being a part-time worker and learning to code full-time. I could not afford to spend hours preparing a meal. 
-                    So I decided why not make an app where people can only view recipes that are short and quick? 
-                    Last Minute Eats has all the recipes perfect for those in a hurry or just lazy with less than 5 ingredients and 7 steps. 
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://last-minute-eats.now.sh" target="_blank" rel="noopener noreferrer">Live App</a>
-                    <a class="link" href="https://github.com/ddlanf/Last-minutes-eats-client" target="_blank" rel="noopener noreferrer">Github Client Repo</a>
-                    <a class="link" href="https://github.com/ddlanf/Last-minute-eats-server" target="_blank" rel="noopener noreferrer">Github Server Repo</a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="project-box">
-                <h3 class="title">My Used Car Salesman</h3>
-                <img class="project-image1" src="images/myusedcarsalesman2.PNG" alt="Myusedcarsalesman image"/>
-                <img class="project-image2" src="images/myusedcarsalesman.PNG" alt="Myusedcarsalesman image fullscreen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/css-3.png" alt="CSS logo"/>
-                    <img class="skill-logo project" src="images/react.png" alt="react logo"/>
-                    <img class="skill-logo project" src="images/nodejs.png" alt="nodejs logo"/>
-                    <img class="skill-logo project" src="images/jwt.jpg" alt="jwt logo"/>
-                    <img class="skill-logo project" src="images/posgresSQL.png" alt="posgres logo"/>
-                </div>
-                <p class="description">
-                    I had a very difficult time selling my beloved Mazda 2. Dealing with half-interested buyers, low ballers, 
-                    and ones that decide to ditch at the last minute. Because I understand all the hassle people go through 
-                    when selling their used car, I decided to make an app that saves car owner’s time by finding individuals 
-                    who can sell their car and those who want to make some extra bucks by selling other people’s cars. 
-                    All the user information on this app is protected with the JWT authentication system. 
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://myusedcarsalesman.now.sh" target="_blank" rel="noopener noreferrer">Live App</a>
-                    <a class="link" href="https://github.com/ddlanf/MyUsedCarSalesman-client" target="_blank" rel="noopener noreferrer">Github Client Repo</a>
-                    <a class="link" href="https://github.com/ddlanf/MyUsedCarSalesman-api-auth" target="_blank" rel="noopener noreferrer">Github Server Repo</a>    
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="project-box">
-                <h3 class="title">QouteIX</h3>
-                <img class="project-image1" src="images/qouteix2.png" alt="QouteIX image"/>
-                <img class="project-image2" src="images/qouteix.png" alt="QouteIX image fullscreen"/>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/react.png" alt="react logo"/>
-                    <img class="skill-logo project" src="images/firebase.png" alt="firebase logo"/>
-                    <img class="skill-logo project" src="images/reactPDF.png" alt="reactPDF logo"/>
-                    <img class="skill-logo project" src="images/Bootstrap.png" alt="posgres logo"/>
-                    <img class="skill-logo project" src="images/formik.png" alt="posgres logo"/>
-                </div>
-                <p class="description">
-                    Qouteix is a proposal builder app aimed to help businesses make beautiful project proposals with an 
-                    intuitive user interface and offer various useful features such as pdf generation, an internal emailing system, 
-                    and private/public item database. This is the first app I have successfully built as a professional
-                    developer at Htech Studio.
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://www.quoteix.com" target="_blank" rel="noopener noreferrer">Live App</a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="project-box last">
-                <h3 class="title">Home Earth</h3>
-                <h3 class="title">Coming soon!</h3>
-                <div class="technology-used skill-images">
-                    <img class="skill-logo project" src="images/react.png" alt="react logo"/>
-                    <img class="skill-logo project" src="images/firebase.png" alt="firebase logo"/>
-                    <img class="skill-logo project" src="images/flutter.png" alt="reactPDF logo"/>
-                    <img class="skill-logo project" src="images/dart.png" alt="posgres logo"/>
-                </div>
-                <p class="description">
-                    Homeearth is a mobile app for posting non-profit organization events, which aims to encourage more people in the community to voluteer.
-                </p>
-                <div class="porfolio-links">
-                    <a class="link" href="https://homeearthproject.com/index" target="_blank" rel="noopener noreferrer">Project Page</a>
+            <div class="portfolio-link">
+                <p>For more details about my work and technical insights, visit my blog:</p>
+                <div class="blog-links">
+                    <a href="https://kaihatsubridge.com/en/blog" target="_blank" rel="noopener noreferrer" class="blog-button">English Blog</a>
+                    <a href="https://kaihatsubridge.com/ja/blog" target="_blank" rel="noopener noreferrer" class="blog-button">日本語ブログ</a>
                 </div>
             </div>
         </section>
 
         <section class="ending-bio">
-            <h1 class="ending-about-me">Besides the tech...</h1>
+            <h1 class="ending-about-me">Besides the tech... 🥋</h1>
             <p>
-                I also enjoy being active in sports. One sport that I really prize is Judo, which I happen to be a brown belt in. 
-                I love training myself both physically and mentally. Training in Judo has always cleared my mind and has 
-                helped me get through mental obstacles especially when I felt like giving up. I plan to continue working hard and 
-                eventually work towards achieving my blackbelt.  
+                I am a Judo black belt and love practicing spining top tricks. 
+                Happy to teach you either if you are interested!
             </p>
         </section>
     </main>
